@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\ResponseHeaderBag;
 
 class productoController extends Controller
 {
-    public function productoCreate(Request $request){
+    public function productCreate(Request $request){
         $datacreate = new Productos();
         $datacreate->nombre = $request->nombre;
         $datacreate->descripcion = $request->descripcion;
@@ -20,7 +20,7 @@ class productoController extends Controller
             "mesagge" => "producto creado correctamente"
         ]);
     }
-    public function productoDelete(Request $request){
+    public function productDelete(Request $request){
         if(Productos::where("id",$request->id)->exists()){
             $datadelete = Productos::find($request->id);
             $datadelete -> delete();
@@ -38,7 +38,7 @@ class productoController extends Controller
         
     }
     }
-    public function productoGet(){
+    public function productGet(){
         $dataresponse = Productos::get();
         return response()-> json([
             "status" => 1,

@@ -25,9 +25,9 @@ Route::post("data_create", [ApiController::class, "dataCreate"]);
 Route::get("data_get", [ApiController::class, "dataGet"]);
 Route::delete("data_delete", [ApiController::class, "dataDelete"]); 
 
-Route::post("producto_create", [productoController::class, "productoCreate"]);
-Route::get("producto_get", [productoController::class, "productoGet"]);
-Route::delete("producto_delete", [productoController::class, "productoDelete"]); 
+Route::post("product_create", [productController::class, "productCreate"]);
+Route::get("product_get", [productController::class, "productGet"]);
+Route::delete("product_delete", [productController::class, "productDelete"]); 
 
 Route::post("usuario_create", [usuarioController::class, "usuarioCreate"]);
 Route::get("usuario_get", [usuarioController::class, "usuarioGet"]);

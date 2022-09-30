@@ -8,7 +8,7 @@ import { retry, catchError } from 'rxjs/operators';
 })
 export class RestApiService {
   // Define API
-  apiURL = 'http://localhost:3000';
+  apiURL = 'api';
   constructor(private http: HttpClient) {}
   /*========================================
     CRUD Methods for consuming RESTful API
@@ -22,39 +22,41 @@ export class RestApiService {
   // HttpClient API get() method => Fetch employees list
   getProducts(): Observable<Product> {
     return this.http
-      .get<Product>(this.apiURL + '/product-get')
+      .get<Product>(this.apiURL + '/product_get')
       .pipe(retry(1), catchError(this.handleError));
   }
   // HttpClient API get() method => Fetch employee
-  getEmployee(id: any): Observable<Employee> {
+  getProduct(id: any): Observable<Product> {
     return this.http
-      .get<Employee>(this.apiURL + '/employees/' + id)
+      .get<Product>(this.apiURL + '/product_get/' + id)
       .pipe(retry(1), catchError(this.handleError));
   }
   // HttpClient API post() method => Create employee
-  createEmployee(employee: any): Observable<Employee> {
+  createProduct(product: any): Observable<Product> {
     return this.http
-      .post<Employee>(
-        this.apiURL + '/employees',
-        JSON.stringify(employee),
+      .post<Product>(
+        this.apiURL + '/product_create',
+        JSON.stringify(product),
         this.httpOptions
       )
       .pipe(retry(1), catchError(this.handleError));
   }
   // HttpClient API put() method => Update employee
-  updateEmployee(id: any, employee: any): Observable<Employee> {
+  //TODAVIA HAY QUE COMPLETARLO
+  //HAY QUE HACERLO CON POST O PUT
+  updateProduct(id: any, product: any): Observable<Product> {
     return this.http
-      .put<Employee>(
-        this.apiURL + '/employees/' + id,
-        JSON.stringify(employee),
+      .put<Product>(
+        this.apiURL + '/products/' + id,
+        JSON.stringify(product),
         this.httpOptions
       )
       .pipe(retry(1), catchError(this.handleError));
   }
   // HttpClient API delete() method => Delete employee
-  deleteEmployee(id: any) {
+  deleteProduct(id: any) {
     return this.http
-      .delete<Employee>(this.apiURL + '/employees/' + id, this.httpOptions)
+      .delete<Product>(this.apiURL + '/product_delete' + id, this.httpOptions)
       .pipe(retry(1), catchError(this.handleError));
   }
   // Error handling
