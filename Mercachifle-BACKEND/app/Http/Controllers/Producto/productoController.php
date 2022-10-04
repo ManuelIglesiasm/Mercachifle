@@ -40,10 +40,6 @@ class productoController extends Controller
     }
     public function productGet(){
         $dataresponse = Productos::get();
-        return response()-> json([
-            "status" => 1,
-            "mesagge" => "producto conseguido correctamente",
-            "data" => $dataresponse
-        ]);
+        return response()-> json($dataresponse);
     }
 }

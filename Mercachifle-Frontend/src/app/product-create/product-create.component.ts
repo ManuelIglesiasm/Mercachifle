@@ -4,10 +4,10 @@ import { RestApiService } from '../shared/rest-api.service';
 @Component({
   selector: 'app-product-create',
   templateUrl: './product-create.component.html',
-  styleUrls: ['./product-create.component.scss'],
+  styleUrls: ['./product-create.component.css'],
 })
 export class ProductCreateComponent implements OnInit {
-  @Input() productDetails = { name: '', detail: '', stock: 0 };
+  @Input() productDetails = { nombre: '', descripcion: '', stock: 0 };
   constructor(public restApi: RestApiService, public router: Router) {}
   ngOnInit() {}
   addProduct(dataProduct: any) {

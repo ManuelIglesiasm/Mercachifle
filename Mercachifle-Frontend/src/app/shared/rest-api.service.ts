@@ -19,13 +19,13 @@ export class RestApiService {
       'Content-Type': 'application/json',
     }),
   };
-  // HttpClient API get() method => Fetch employees list
+  // HttpClient API get() method => Obtener lista de empleados
   getProducts(): Observable<Product> {
     return this.http
       .get<Product>(this.apiURL + '/product_get')
       .pipe(retry(1), catchError(this.handleError));
   }
-  // HttpClient API get() method => Fetch employee
+  // HttpClient API get() method => obtener producto
   getProduct(id: any): Observable<Product> {
     return this.http
       .get<Product>(this.apiURL + '/product_get/' + id)
@@ -42,8 +42,7 @@ export class RestApiService {
       .pipe(retry(1), catchError(this.handleError));
   }
   // HttpClient API put() method => Update employee
-  //TODAVIA HAY QUE COMPLETARLO
-  //HAY QUE HACERLO CON POST O PUT
+  
   updateProduct(id: any, product: any): Observable<Product> {
     return this.http
       .put<Product>(
