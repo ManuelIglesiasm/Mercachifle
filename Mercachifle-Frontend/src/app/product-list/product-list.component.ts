@@ -11,13 +11,13 @@ export class ProductListComponent implements OnInit {
   ngOnInit() {
     this.loadProducts();
   }
-  // Get Products list
+  // Obtiene la lista de productos
   loadProducts() {
     return this.restApi.getProducts().subscribe((data: {}) => {
       this.Product = data;
     });
   }
-  // Delete Product
+  // Elimina Product
   deleteProduct(id: any) {
     if (window.confirm('Eh wachin, tas seguro?')) {
       this.restApi.deleteProduct(id).subscribe((data) => {

@@ -1,6 +1,5 @@
 export class Product {
-    id: bigint;
-    name: string;
+    nombre: string;
     descripcion: string;
     stock: bigint;
  }

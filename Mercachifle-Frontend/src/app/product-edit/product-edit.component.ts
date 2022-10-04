@@ -20,9 +20,9 @@ export class ProductEditComponent implements OnInit {
       this.productData = data;
     })
   }
-  // Update product data
+  // Actualizar datos del producto
   updateProduct() {
-    if(window.confirm('Are you sure, you want to update?')){
+    if(window.confirm('Che, tas seguro?')){
       this.restApi.updateProduct(this.id, this.productData).subscribe(data => {
         this.router.navigate(['/products-list'])
       })

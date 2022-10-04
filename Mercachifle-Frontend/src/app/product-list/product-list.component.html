@@ -1,36 +1,35 @@
 <div class="container custom-container-2">
-    <!-- Show it when there is no employee -->
-    <div class="no-data text-center" *ngIf="Employee.length == 0">
-      <p>There is no employee added yet!</p>
-      <button class="btn btn-outline-primary" routerLink="/create-employee">
-        Add Empoyee
+    <!-- Se muestra cuando no hay producto -->
+    <div class="no-data text-center" *ngIf="Product.length == 0">
+      <p>Aun no has agregado ningun producto!</p>
+      <button class="btn btn-outline-primary" routerLink="/create-product">
+        Añadir producto
       </button>
     </div>
-    <!-- Employees list table, it hides when there is no employee -->
-    <div *ngIf="Employee.length !== 0">
-      <h3 class="mb-3 text-center">Employees List</h3>
+    <!-- Lista de productos, se esconde cuando no hay producto -->
+    <div *ngIf="Producto.length !== 0">
+      <h3 class="mb-3 text-center">Lista de productos</h3>
       <div class="col-md-12">
         <table class="table table-bordered">
           <thead>
             <tr>
-              <th scope="col">User Id</th>
-              <th scope="col">Name</th>
-              <th scope="col">Email</th>
-              <th scope="col">Phone</th>
-              <th scope="col">Action</th>
+              <th scope="col">id</th>
+              <th scope="col">nombre</th>
+              <th scope="col">descripcion</th>
+              <th scope="col">stock</th>
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let employee of Employee">
-              <td>{{ employee.id }}</td>
-              <td>{{ employee.name }}</td>
-              <td>{{ employee.email }}</td>
-              <td>{{ employee.phone }}</td>
+            <tr *ngFor="let product of Product">
+              <td>{{ product.id }}</td>
+              <td>{{ product.nombre }}</td>
+              <td>{{ product.descripcion }}</td>
+              <td>{{ product.stock }}</td>
               <td>
-                <span class="edit" routerLink="/employee-edit/{{ employee.id }}"
-                  >Edit</span>
-                <span class="delete" (click)="deleteEmployee(employee.id)"
-                  >Delete</span
+                <span class="edit" routerLink="/product-edit/{{ product.id }}"
+                  >Editar</span>
+                <span class="delete" (click)="deleteProduct(product.id)"
+                  >Eliminar</span
                 >
               </td>
             </tr>
