@@ -20,9 +20,22 @@ class productoController extends Controller
             "mesagge" => "producto creado correctamente"
         ]);
     }
-    public function productDelete(Request $request){
-        if(Productos::where("id",$request->id)->exists()){
-            $datadelete = Productos::find($request->id);
+    public function productUpdate($id,Request $request){
+        if(Productos::where("id",$id)->exists()){
+            $data = Productos::find($id);
+        $data->nombre = $request->nombre;
+        $data->descripcion = $request->descripcion;
+        $data->stock = $request->stock;
+        $data->save();
+        return response()-> json([
+            "status" => 1,
+            "mesagge" => "producto actualizado correctamente"
+        ]);
+    }
+    }
+    public function productDelete($id){
+        if(Productos::where("id",$id)->exists()){
+            $datadelete = Productos::find($id);
             $datadelete -> delete();
             return response()-> json([
                 "status" => 1,
@@ -38,8 +51,13 @@ class productoController extends Controller
         
     }
     }
-    public function productGet(){
+    public function productGetAll(){
         $dataresponse = Productos::get();
+        return response()-> json($dataresponse);
+    }
+
+    public function productGet($id){
+        $dataresponse = Productos::find($id);
         return response()-> json($dataresponse);
     }
 }

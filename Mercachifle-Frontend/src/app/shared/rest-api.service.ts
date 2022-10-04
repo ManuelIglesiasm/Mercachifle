@@ -22,7 +22,7 @@ export class RestApiService {
   // HttpClient API get() method => Obtener lista de empleados
   getProducts(): Observable<Product> {
     return this.http
-      .get<Product>(this.apiURL + '/product_get')
+      .get<Product>(this.apiURL + '/product_get_all')
       .pipe(retry(1), catchError(this.handleError));
   }
   // HttpClient API get() method => obtener producto
@@ -55,7 +55,7 @@ export class RestApiService {
   // HttpClient API delete() method => Delete employee
   deleteProduct(id: any) {
     return this.http
-      .delete<Product>(this.apiURL + '/product_delete' + id, this.httpOptions)
+      .delete<Product>(this.apiURL + '/product_delete/' + id, this.httpOptions)
       .pipe(retry(1), catchError(this.handleError));
   }
   // Error handling
