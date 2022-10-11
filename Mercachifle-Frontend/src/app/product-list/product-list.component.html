@@ -2,9 +2,6 @@
     <!-- Se muestra cuando no hay producto -->
     <div class="no-data text-center" *ngIf="Product.length == 0">
       <p>Aun no has agregado ningun producto!</p>
-      <button class="btn btn-outline-primary" routerLink="/create-product">
-        Añadir producto
-      </button>
     </div>
     <!-- Lista de productos, se esconde cuando no hay producto -->
     <div *ngIf="Product.length !== 0">
@@ -37,4 +34,9 @@
         </table>
       </div>
     </div>
+  </div>
+  <div class="no-data text-center">
+    <button class="btn btn-outline-primary" routerLink="/create-product">
+      Añadir producto
+    </button>
   </div>

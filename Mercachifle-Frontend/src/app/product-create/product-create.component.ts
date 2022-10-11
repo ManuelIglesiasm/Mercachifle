@@ -12,7 +12,7 @@ export class ProductCreateComponent implements OnInit {
   ngOnInit() {}
   addProduct(dataProduct: any) {
     this.restApi.createProduct(this.productDetails).subscribe((data: {}) => {
-      this.router.navigate(['/products-list']);
+      this.router.navigate(['/product-list']);
     });
   }
 }
