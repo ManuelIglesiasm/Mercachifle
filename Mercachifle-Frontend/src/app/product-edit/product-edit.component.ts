@@ -24,7 +24,7 @@ export class ProductEditComponent implements OnInit {
   updateProduct() {
     if(window.confirm('Che, tas seguro?')){
       this.restApi.updateProduct(this.id, this.productData).subscribe(data => {
-        this.router.navigate(['/products-list'])
+        this.router.navigate(['/product-list'])
       })
     }
   }
