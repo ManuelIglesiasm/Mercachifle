@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\http\Controllers\Api\ApiController;
 use App\http\Controllers\Producto\productoController;
 use App\http\Controllers\Usuario\usuarioController;
+use App\Http\Controllers\API\RegisterController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -38,3 +39,15 @@ Route::get("usuario_get", [usuarioController::class, "usuarioGet"]);
 Route::delete("usuario_delete", [usuarioController::class, "usuarioDelete"]); 
 
 
+Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+    return $request->user();
+});
+
+Route::controller(RegisterController::class)->group(function(){
+    Route::post('register', 'register');
+    Route::post('login', 'login');
+});
+     
+Route::middleware('auth:sanctum')->group( function () {
+    Route::resource('products', ProductController::class);
+});
