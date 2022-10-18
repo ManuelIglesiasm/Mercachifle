@@ -1,16 +1,21 @@
+//Importar utilidades
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+//Importar rutas
 import { AppRoutingModule } from './app-routing.module';
+//Importar componente
 import { AppComponent } from './app.component';
-
+//Importar modulos de productos
 import { ProductCreateComponent } from './product-create/product-create.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { ProductListComponent } from './product-list/product-list.component';
+//Importar modulos de login
+import { LoginComponent } from "./login/login.component";
+import { RegisterComponent } from "./register/register.component";
 
-import { HttpClientModule } from '@angular/common/http';
 
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,7 +23,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     ProductCreateComponent,
     ProductEditComponent,
-    ProductListComponent
+    ProductListComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

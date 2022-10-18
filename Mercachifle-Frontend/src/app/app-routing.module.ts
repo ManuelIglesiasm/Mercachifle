@@ -1,15 +1,23 @@
+//Importar utilidades
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AppComponent } from "./app.component";
+//importar modulos de producto
 import { ProductCreateComponent } from './product-create/product-create.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { ProductListComponent } from './product-list/product-list.component';
+//importar modulos de login
+import { LoginComponent } from "./login/login.component";
+import { RegisterComponent } from "./register/register.component";
 
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'create-product' },
   { path: 'create-product', component: ProductCreateComponent },
   { path: 'product-list', component: ProductListComponent },
   { path: 'product-edit/:id', component: ProductEditComponent },
+  { path: "", component: AppComponent, pathMatch: "full" },
+  { path: "login", component: LoginComponent, pathMatch: "full" },
+  { path: "register", component: RegisterComponent, pathMatch: "full" }
 ];
 
 
@@ -18,5 +26,6 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
 
 
