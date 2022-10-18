@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { RestApiService } from "../shared/rest-api.service";
 
 @Component({
   selector: "app-register",
@@ -6,14 +7,14 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./register.component.css"]
 })
 export class RegisterComponent {
+  name: string;
   email: string;
   password: string;
   confirmPassword: string;
 
-  constructor() {}
+  constructor(private api: RestApiService) {}
 
   register() {
-    console.log(this.email);
-    console.log(this.password);
+    this.api.register(this.name, this.email, this.password, this.confirmPassword)
   }
 }

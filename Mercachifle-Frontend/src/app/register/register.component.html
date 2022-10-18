@@ -2,6 +2,13 @@
     <form class="custom-form" method="post">
       <h1>Register</h1>
       <input
+        type="name"
+        [(ngModel)]="name"
+        name="name"
+        placeholder="Name"
+        required="required"
+      />
+      <input
         type="email"
         [(ngModel)]="email"
         name="email"

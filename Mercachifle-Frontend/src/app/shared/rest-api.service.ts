@@ -42,7 +42,6 @@ export class RestApiService {
       .pipe(retry(1), catchError(this.handleError));
   }
   // HttpClient API put() method => Update employee
-  
   updateProduct(id: any, product: any): Observable<Product> {
     return this.http
       .put<Product>(
@@ -72,5 +71,13 @@ export class RestApiService {
     return throwError(() => {
       return errorMessage;
     });
+  }
+
+  login(){
+
+  }
+  //HAY QUE HACER UN FORM DATA AL QUE LE AGREGUEMOS LOS PARAMTEROS Y EL RETURN TIENE QUE MANDAR EL FORM DATA
+  register(name: string, email: string, password: string, confirmPassword: string){
+    return this.http.post(this.apiURL + '/register', ) //<-- ACA FALTA EL PARAMETRO DE LO QUE VA A MANDAR
   }
 }
