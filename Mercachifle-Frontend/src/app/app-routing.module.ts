@@ -9,13 +9,15 @@ import { ProductListComponent } from './product-list/product-list.component';
 //importar modulos de login
 import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
+import { HomeComponent } from './home/home.component';
+
 
 
 const routes: Routes = [
   { path: 'create-product', component: ProductCreateComponent },
   { path: 'product-list', component: ProductListComponent },
   { path: 'product-edit/:id', component: ProductEditComponent },
-  { path: "", component: AppComponent, pathMatch: "full" },
+  { path: "", component: HomeComponent, pathMatch: "full" },
   { path: "login", component: LoginComponent, pathMatch: "full" },
   { path: "register", component: RegisterComponent, pathMatch: "full" }
 ];

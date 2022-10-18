@@ -14,6 +14,8 @@ import { ProductListComponent } from './product-list/product-list.component';
 //Importar modulos de login
 import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
+//Importar modulos de home
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -25,7 +27,8 @@ import { RegisterComponent } from "./register/register.component";
     ProductEditComponent,
     ProductListComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
