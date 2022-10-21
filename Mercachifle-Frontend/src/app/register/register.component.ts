@@ -14,7 +14,7 @@ export class RegisterComponent {
 
   constructor(private api: RestApiService) {}
 
-  register() {
-    this.api.register(this.name, this.email, this.password, this.confirmPassword)
-  }
+  register(name: string, email: string, password: string, confirmPassword: string){
+    this.api.register(name, email, password, confirmPassword);
+}
 }

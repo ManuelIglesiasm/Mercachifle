@@ -72,12 +72,21 @@ export class RestApiService {
       return errorMessage;
     });
   }
+  register(name: string, email: string, password: string, confirmPassword: string){
+    const formData = new FormData();
+    formData.append("name", name);
+    formData.append("email", email);
+    formData.append("password", password);
+    formData.append("confirmPassword", confirmPassword); 
 
+    return this.http.post<any>(this.apiURL + '/register', formData ); //<-- ACA FALTA EL PARAMETRO DE LO QUE VA A MANDAR
+  }
   login(){
 
   }
+  
   //HAY QUE HACER UN FORM DATA AL QUE LE AGREGUEMOS LOS PARAMTEROS Y EL RETURN TIENE QUE MANDAR EL FORM DATA
-  register(name: string, email: string, password: string, confirmPassword: string){
-    return this.http.post(this.apiURL + '/register', ) //<-- ACA FALTA EL PARAMETRO DE LO QUE VA A MANDAR
-  }
+ // register(name: string, email: string, password: string, confirmPassword: string){
+  //  return this.http.post(this.apiURL + '/register', ) //<-- ACA FALTA EL PARAMETRO DE LO QUE VA A MANDAR
+  //}
 }
