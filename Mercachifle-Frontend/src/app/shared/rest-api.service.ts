@@ -79,7 +79,9 @@ export class RestApiService {
     formData.append("password", password);
     formData.append("confirmPassword", confirmPassword); 
 
-    return this.http.post<any>(this.apiURL + '/register', formData ); //<-- ACA FALTA EL PARAMETRO DE LO QUE VA A MANDAR
+    return this.http.post<any>(this.apiURL + '/register', JSON.stringify(formData),
+    this.httpOptions)
+    .pipe(retry(1), catchError(this.handleError));
   }
   login(){
 
