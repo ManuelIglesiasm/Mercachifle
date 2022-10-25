@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 import { RestApiService } from "../shared/rest-api.service";
 
 @Component({
@@ -10,14 +11,15 @@ export class LoginComponent implements OnInit  {
   email: string ;
   password: string;
 
-  constructor(private api: RestApiService) {}
+  constructor(private api: RestApiService, private route:Router) {}
   ngOnInit() {
     
   }
   login(email: string, password: string) {
-    this.api.login(email, password).subscribe((data) => {
-      console.log("pepe")
-    });;
+    this.api.login(email, password).subscribe(
+      (data) => {
+      this.route.navigate(['/product-list']);
+    },(error)=> alert("hay error"));;
   }
 
  
