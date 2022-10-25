@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { RestApiService } from "../shared/rest-api.service";
 
 @Component({
   selector: "app-login",
@@ -9,14 +10,15 @@ export class LoginComponent implements OnInit  {
   email: string ;
   password: string;
 
-  constructor() {
-
-  }
+  constructor(private api: RestApiService) {}
   ngOnInit() {
+    
+  }
+  login(email: string, password: string) {
+    this.api.login(email, password).subscribe((data) => {
+      console.log("pepe")
+    });;
   }
 
-  login() {
-    console.log(this.email);
-    console.log(this.password);
-  }
+ 
 }

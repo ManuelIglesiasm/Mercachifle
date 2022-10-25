@@ -73,22 +73,30 @@ export class RestApiService {
     });
   }
   register(name: string, email: string, password: string, confirmPassword: string){
+    console.log("pepe2");
     const formData = new FormData();
     formData.append("name", name);
     formData.append("email", email);
     formData.append("password", password);
     formData.append("confirmPassword", confirmPassword); 
-
-    return this.http.post<any>(this.apiURL + '/register', JSON.stringify(formData),
-    this.httpOptions)
-    .pipe(retry(1), catchError(this.handleError));
+    const data = {
+      name:name,
+      email:email,
+      password:password,
+      confirmPassword:confirmPassword
+    }
+    return this.http.post<any>(this.apiURL + '/register', data,
+    this.httpOptions).pipe(retry(1), catchError(this.handleError));
   }
-  login(){
-
+  login(email: string, password: string){
+    const formData = new FormData();
+    formData.append("email", email);
+    formData.append("password", password); 
+    const data = {
+      email:email,
+      password:password
+    }
+    return this.http.post<any>(this.apiURL + '/login', data,
+    this.httpOptions).pipe(retry(1), catchError(this.handleError));
   }
-  
-  //HAY QUE HACER UN FORM DATA AL QUE LE AGREGUEMOS LOS PARAMTEROS Y EL RETURN TIENE QUE MANDAR EL FORM DATA
- // register(name: string, email: string, password: string, confirmPassword: string){
-  //  return this.http.post(this.apiURL + '/register', ) //<-- ACA FALTA EL PARAMETRO DE LO QUE VA A MANDAR
-  //}
 }

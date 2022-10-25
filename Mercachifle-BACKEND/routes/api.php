@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\http\Controllers\Api\ApiController;
 use App\http\Controllers\Producto\productoController;
 use App\http\Controllers\Usuario\usuarioController;
-use App\Http\Controllers\API\RegisterController;
+use App\Http\Controllers\Api\RegisterController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -43,11 +43,14 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::post("register", [RegisterController::class, "register"]);
+Route::post("login", [RegisterController::class, "login"]);
+/*
 Route::controller(RegisterController::class)->group(function(){
     Route::post('register', 'register');
     Route::post('login', 'login');
 });
-     
+  */   
 Route::middleware('auth:sanctum')->group( function () {
     Route::resource('products', ProductController::class);
 });
