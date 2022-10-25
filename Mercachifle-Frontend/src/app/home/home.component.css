@@ -1,0 +1,32 @@
+
+nav{
+
+    display: inline;
+    position: fixed;
+    top: 0rem;
+    width: 100%;
+    background-color: rgb(172, 142, 192);
+}
+
+.btn{
+    text-decoration: none;
+    color: initial;
+    background-color: rgb(167, 202, 189);
+    display: inline;
+    margin-right: 0%;
+}
+
+.icon{
+    color: black;
+    height: 4rem;
+    width: 4rem;
+    display: block;
+}
+
+.cuadrado{
+    background-color: black;
+    height: 50px;
+    width: 50px;
+    display: inline !important;
+    position: absolute;
+}
