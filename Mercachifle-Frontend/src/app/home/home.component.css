@@ -5,16 +5,18 @@ nav{
     position: fixed;
     top: 0rem;
     width: 100%;
-    background-color: rgb(172, 142, 192);
+    background-color: rgb(191, 96, 255);
 }
 
 .btn{
     text-decoration: none;
     color: initial;
-    background-color: rgb(167, 202, 189);
+    background-color: rgb(255, 255, 255);
     display: inline;
     margin-right: 0%;
 }
+
+
 
 .icon{
     color: black;
@@ -24,9 +26,10 @@ nav{
 }
 
 .cuadrado{
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     height: 50px;
     width: 50px;
     display: inline !important;
     position: absolute;
+    margin-right: 10%;
 }

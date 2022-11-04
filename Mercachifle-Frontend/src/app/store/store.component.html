@@ -1,42 +1,32 @@
+<button class="btn btn-outline-primary" routerLink="/">
+  Log out
+</button>  
+
 <div class="container custom-container-2">
     <!-- Se muestra cuando no hay producto -->
     <div class="no-data text-center" *ngIf="Product.length == 0">
       <p>Aun no has agregado ningun producto!</p>
     </div>
-    <!-- Lista de productos, se esconde cuando no hay producto -->
     <div *ngIf="Product.length !== 0">
       <h3 class="mb-3 text-center">Lista de productos</h3>
       <div class="col-md-12">
         <table class="table table-bordered">
           <thead>
             <tr>
-              <th scope="col">id</th>
               <th scope="col">nombre</th>
               <th scope="col">descripcion</th>
-              <th scope="col">stock</th>
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let product of Product">
-              <td>{{ product.id }}</td>
+            
               <td>{{ product.nombre }}</td>
               <td>{{ product.descripcion }}</td>
-              <td>{{ product.stock }}</td>
-              <td>
-                
-                <span class="edit" routerLink="/product-edit/{{ product.id }}"
-                  >Editar</span>
-                <span class="delete" (click)="deleteProduct(product.id)"
-                  >Eliminar</span>
-              </td>
+
             </tr>
           </tbody>
         </table>
       </div>
     </div>
-  </div>
-  <div class="no-data text-center">
-    <button class="btn btn-outline-primary" routerLink="/create-product">
-      Añadir producto
-    </button>
+ 
   </div>

@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit  {
   login(email: string, password: string) {
     this.api.login(email, password).subscribe(
       (data) => {
-      this.route.navigate(['/product-list']);
+      this.route.navigate(['/store']);
     },(error)=> alert("hay error"));;
   }
 

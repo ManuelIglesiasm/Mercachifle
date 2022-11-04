@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { RestApiService } from "../shared/rest-api.service";
-
+import { Router } from "@angular/router";
 @Component({
   selector: "app-register",
   templateUrl: "./register.component.html",
@@ -12,11 +12,11 @@ export class RegisterComponent {
   password: string;
   confirmPassword: string;
 
-  constructor(private api: RestApiService) {}
+  constructor(private api: RestApiService, private route:Router) {}
 
   register(name: string, email: string, password: string, confirmPassword: string){
     this.api.register(name, email, password, confirmPassword).subscribe((data) => {
-      console.log("pepe")
+      this.route.navigate(['/store']);
     });;
 }
 }
