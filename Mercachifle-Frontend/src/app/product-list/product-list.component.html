@@ -1,3 +1,7 @@
+<button class="btn btn-outline-primary" routerLink="/">
+  Home
+</button>
+
 <div class="container custom-container-2">
     <!-- Se muestra cuando no hay producto -->
     <div class="no-data text-center" *ngIf="Product.length == 0">
@@ -20,8 +24,8 @@
             <tr *ngFor="let product of Product">
               <td>{{ product.id }}</td>
               <td>{{ product.nombre }}</td>
-              <td>{{ product.descripcion }}</td>
-              <td>{{ product.stock }}</td>
+              <td>{{ product.Descripcion }}</td>
+              <td>{{ product.Stock }}</td>
               <td>
                 
                 <span class="edit" routerLink="/product-edit/{{ product.id }}"
@@ -40,3 +44,7 @@
       Añadir producto
     </button>
   </div>
+
+  <footer>
+    <p> compranos galletitas o me muero de anvre</p>
+  </footer>
