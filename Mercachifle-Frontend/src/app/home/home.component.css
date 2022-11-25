@@ -1,3 +1,21 @@
+/*Variables*/
+
+:root {
+    --font-family: "Roboto", sans-serif;
+    --normal-font: 400;
+    --bold-font: 700;
+    --bolder-font: 900;
+    --bg-color: #fcfcfc;
+    --primary-color: #4756df;
+    --secondary-color: #ff7235;
+    --primary-shadow: #8b8eaf;
+    --secondary-shadow: #a17a69;
+    --bottom-margin: 0.5rem;
+    --bottom-margin-2: 1rem;
+    --line-height: 1.7rem;
+    --transition: 0.3s;
+  }
+
 
 nav{
 
@@ -139,4 +157,61 @@ footer .footer-below {
   padding: 25px 0;
   background-color: #6441a5;
 }
+
+/*Tarjetas de info*/
+
+ .proyectos {
+    background-color: var(--bg-color);
+    padding: 50px;
+    margin-top: 10px;
+    
+  }
+  
+  .foto-de-proyecto {
+    width: 55%;
+    height: 50%;
+  }
+  
+
+
+  .titulo-informacion {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  
+  .contenedor-de-proyectos {
+    text-align: center;
+    width: 21.875rem;
+    padding: 10px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0px auto;
+  }
+
+  .contenedor-de-proyecto p {
+    padding: 25px;
+  }
+  
+  .titulo-de-proyecto {
+    margin-bottom: var(--bottom-margin);
+  }
+  
+  .detalles-de-proyecto {
+    margin-bottom: var(--bottom-margin);
+  }
+  
+  .tarjeta-de-proyecto {
+    background-color: rgb(223, 223, 223);
+    border-radius: 5px;
+    box-shadow: 0 3px 10px var(--primary-shadow);
+    padding: 10px;
+    margin-left: 10px;
+  }
+
+
+
+
+  
 
