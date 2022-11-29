@@ -16,13 +16,16 @@
     --transition: 0.3s;
   }
 
+  body{
+    margin: 0;
+  }
 
 nav{
-
+    max-width: 100%;
     display: inline;
     position: fixed;
     top: 0rem;
-    width: 100%;
+    margin: auto;
     background-color: rgb(0, 0, 0);
 }
 
@@ -52,6 +55,7 @@ nav{
     padding: 5px 5px;
 }
 .logo{
+
     height: 40px;
 }
 nav ul{
@@ -93,6 +97,7 @@ section{
     height: calc(100vh - 80px);
 }
 
+
 @media (max-width: 952px){
     .enlace{
         padding-left: 20px;
@@ -132,6 +137,17 @@ section{
         left:0;
     }
 }
+/* imagen principal*/
+
+.img_prin h2{
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 10%;
+height: 90vh;
+}
 
 /* footer */
 
@@ -161,7 +177,7 @@ footer .footer-below {
 /*Tarjetas de info*/
 
  .proyectos {
-    background-color: var(--bg-color);
+    background-color: black;
     padding: 50px;
     margin-top: 10px;
     
@@ -177,6 +193,7 @@ footer .footer-below {
   .titulo-informacion {
     text-align: center;
     margin-bottom: 5px;
+    color: white;
   }
   
   .contenedor-de-proyectos {
@@ -203,55 +220,19 @@ footer .footer-below {
   }
   
   .tarjeta-de-proyecto {
-    background-color: rgb(223, 223, 223);
+    background-color: rgb(255, 255, 255);
     border-radius: 5px;
     box-shadow: 0 3px 10px var(--primary-shadow);
     padding: 10px;
     margin-left: 10px;
   }
-/*imagen de inicio*/
 
-
-
-  .container {
-    position: sticky;
-    width: 40%;
-  }
-  
-  .image {
-    display: block;
-    width: 50%;
-    height: 50%;
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 90%;
-    width: 50%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #6441a5;
-  }
-  
-  .container:hover .overlay {
-    opacity: 1;
-  }
-  
-  .text {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-
-  
+#caracteristicas .container{
+  text-align: center;
+  padding: 200px 12px;
+}
+#caracteristicas li{
+  margin: 15px 0px;
+  font-weight: bold;
+}
 
