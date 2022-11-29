@@ -1,3 +1,21 @@
+/*Variables*/
+
+:root {
+    --font-family: "Roboto", sans-serif;
+    --normal-font: 400;
+    --bold-font: 700;
+    --bolder-font: 900;
+    --bg-color: #fcfcfc;
+    --primary-color: #4756df;
+    --secondary-color: #ff7235;
+    --primary-shadow: #8b8eaf;
+    --secondary-shadow: #a17a69;
+    --bottom-margin: 0.5rem;
+    --bottom-margin-2: 1rem;
+    --line-height: 1.7rem;
+    --transition: 0.3s;
+  }
+
 
 nav{
 
@@ -5,7 +23,7 @@ nav{
     position: fixed;
     top: 0rem;
     width: 100%;
-    background-color: rgb(191, 96, 255);
+    background-color: rgb(0, 0, 0);
 }
 
 .btn{
@@ -16,20 +34,222 @@ nav{
     margin-right: 0%;
 }
 
-
-
-.icon{
-    color: black;
-    height: 4rem;
-    width: 4rem;
-    display: block;
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
 }
 
-.cuadrado{
-    background-color: rgb(0, 0, 0);
+nav{
+    background:  #6441a5;
     height: 50px;
-    width: 50px;
-    display: inline !important;
-    position: absolute;
-    margin-right: 10%;
+    width: 100%;
 }
+.enlace{
+    position: absolute;
+    padding: 5px 5px;
+}
+.logo{
+    height: 40px;
+}
+nav ul{
+    float: right;
+    margin-right: 60px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #fff;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+li a.active, li a:hover{
+    background: #bd83ff;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+section{
+   /* background: url(fondo.jpg) no-repeat;*/
+    background-size: cover;
+    background-position: center center;
+    height: calc(100vh - 80px);
+}
+
+@media (max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: red;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
+
+/* footer */
+
+.footer-style {
+    padding-top: 20px;
+    background-color:  #6441a5;
+}
+footer {
+  color: white;
+}
+footer h4 {
+  margin-bottom: 5px;
+    font-weight: 4000;
+}
+footer .footer-above {
+  padding-top: 10px;
+  background-color: #6441a5;
+}
+footer .footer-col {
+  margin-bottom: 15px;
+}
+footer .footer-below {
+  padding: 25px 0;
+  background-color: #6441a5;
+}
+
+/*Tarjetas de info*/
+
+ .proyectos {
+    background-color: var(--bg-color);
+    padding: 50px;
+    margin-top: 10px;
+    
+  }
+  
+  .foto-de-proyecto {
+    width: 55%;
+    height: 50%;
+  }
+  
+
+
+  .titulo-informacion {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  
+  .contenedor-de-proyectos {
+    text-align: center;
+    width: 21.875rem;
+    padding: 10px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0px auto;
+  }
+
+  .contenedor-de-proyecto p {
+    padding: 25px;
+  }
+  
+  .titulo-de-proyecto {
+    margin-bottom: var(--bottom-margin);
+  }
+  
+  .detalles-de-proyecto {
+    margin-bottom: var(--bottom-margin);
+  }
+  
+  .tarjeta-de-proyecto {
+    background-color: rgb(223, 223, 223);
+    border-radius: 5px;
+    box-shadow: 0 3px 10px var(--primary-shadow);
+    padding: 10px;
+    margin-left: 10px;
+  }
+/*imagen de inicio*/
+
+  .container {
+    position: sticky;
+    width: 50%;
+  }
+  
+  .image {
+    display: block;
+    width: 50%;
+    height: 50%;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+  }
+  
+  .container:hover .overlay {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  
+

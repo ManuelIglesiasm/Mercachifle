@@ -2,7 +2,14 @@
 
   Log out
 </button>  
+<<<<<<< HEAD
 <button class="btn btn-outline-primary" routerLink="/create-product">Crear Producto</button>
+=======
+<button class="btn btn-outline-primary" routerLink="/product-list">
+  Product-edit
+</button>
+
+>>>>>>> ba4bdeadd68ecbc3789ea8fdbae8719277e7c83e
 <div class="container custom-container-2">
     <!-- Se muestra cuando no hay producto -->
     <div class="no-data text-center" *ngIf="Product.length == 0">
@@ -24,12 +31,17 @@
           <tbody>
             <tr *ngFor="let product of Product">
             
+<<<<<<< HEAD
               <td>{{ product.Nombre }}</td>
               <td>{{ product.Descripcion }}</td>
               <td>{{ product.Stock }}</td>
               <td>{{ product.Vendedor }}</td>
               <td><button>Messirve</button></td>
               
+=======
+              <td>{{ product.nombre }}</td>
+              <td>{{ product.Descripcion }}</td>
+>>>>>>> ba4bdeadd68ecbc3789ea8fdbae8719277e7c83e
 
             </tr>
           </tbody>
@@ -38,3 +50,7 @@
     </div>
  
   </div>
+
+  <footer>
+    <p> compranos galletitas o me muero de anvre</p>
+  </footer>

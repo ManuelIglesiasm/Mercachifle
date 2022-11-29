@@ -1,3 +1,7 @@
+<button class="btn btn-outline-primary" routerLink="/">
+  Home
+</button>
+
 <div class="container custom-container-2">
     <!-- Se muestra cuando no hay producto -->
     <div class="no-data text-center" *ngIf="Product.length == 0">
@@ -19,7 +23,11 @@
           <tbody>
             <tr *ngFor="let product of Product">
               <td>{{ product.id }}</td>
+<<<<<<< HEAD
               <td>{{ product.Nombre }}</td>
+=======
+              <td>{{ product.nombre }}</td>
+>>>>>>> ba4bdeadd68ecbc3789ea8fdbae8719277e7c83e
               <td>{{ product.Descripcion }}</td>
               <td>{{ product.Stock }}</td>
               <td>
@@ -40,3 +48,7 @@
       Añadir producto
     </button>
   </div>
+
+  <footer>
+    <p> compranos galletitas o me muero de anvre</p>
+  </footer>
