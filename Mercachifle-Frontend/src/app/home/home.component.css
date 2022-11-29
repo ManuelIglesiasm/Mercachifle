@@ -68,6 +68,7 @@ nav ul li{
     margin: 0 5px;
 }
 nav ul li a{
+
     color: #fff;
     font-size: 18px;
     padding: 7px 13px;
@@ -139,21 +140,37 @@ section{
 }
 /* imagen principal*/
 
-.img_prin h2{
+.img_prin{
+
+  color: white;
   align-items: center;
   text-align: center;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: 10%;
-height: 90vh;
+  margin-top: 3%;
+  height: 90vh;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+  )
+  ,url(img/inicio.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img_prin h2 .ahora{
+  color: #6441a5;
+
+ 
 }
 
 /* footer */
 
 .footer-style {
     padding-top: 20px;
-    background-color:  #6441a5;
+    background-color:  #1d1c2b;
 }
 footer {
   color: white;
@@ -179,7 +196,7 @@ footer .footer-below {
  .proyectos {
     background-color: black;
     padding: 50px;
-    margin-top: 10px;
+    margin-top: 0px;
     
   }
   
