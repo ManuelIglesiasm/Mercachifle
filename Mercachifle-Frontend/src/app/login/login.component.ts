@@ -19,8 +19,10 @@ export class LoginComponent implements OnInit  {
     this.api.login(email, password).subscribe(
       (data) => {
       this.route.navigate(['/store']);
+      sessionStorage.setItem('user', email);
     },(error)=> alert("hay error"));;
+  
   }
 
- 
+
 }

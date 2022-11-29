@@ -17,6 +17,7 @@ export class RegisterComponent {
   register(name: string, email: string, password: string, confirmPassword: string){
     this.api.register(name, email, password, confirmPassword).subscribe((data) => {
       this.route.navigate(['/store']);
+      sessionStorage.setItem('user', email);
     });;
 }
 }

@@ -16,7 +16,7 @@ import { StoreComponent } from './store/store.component';
 
 const routes: Routes = [
   { path: 'create-product', component: ProductCreateComponent },
-  { path: 'product-list', component: ProductListComponent },
+  { path: 'Mis_productos', component: ProductListComponent },
   { path: 'product-edit/:id', component: ProductEditComponent },
   { path: "", component: HomeComponent, pathMatch: "full" },
   { path: "login", component: LoginComponent, pathMatch: "full" },

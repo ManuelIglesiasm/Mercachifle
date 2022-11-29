@@ -7,12 +7,12 @@ import { RestApiService } from '../shared/rest-api.service';
   styleUrls: ['./product-create.component.css'],
 })
 export class ProductCreateComponent implements OnInit {
-  @Input() productDetails = { nombre: '', descripcion: '', stock: 0, vendedor: '' };
+  @Input() productDetails = { nombre: '', descripcion: '', stock: 0, vendedor: sessionStorage.getItem('user') };
   constructor(public restApi: RestApiService, public router: Router) {}
   ngOnInit() {}
   addProduct(dataProduct: any) {
-    this.restApi.createProduct(this.productDetails).subscribe((data: {}) => {
-      this.router.navigate(['/product-list']);
+    this.restApi.createProduct(this.productDetails).subscribe(data => {
+      this.router.navigate(['/store'])
     });
   }
 }

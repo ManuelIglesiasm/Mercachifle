@@ -27,6 +27,7 @@ class productoController extends Controller
         $data->nombre = $request->nombre;
         $data->descripcion = $request->descripcion;
         $data->stock = $request->stock;
+        $datacreate->vendedor = $request->vendedor;
         $data->save();
         return response()-> json([
             "status" => 1,
