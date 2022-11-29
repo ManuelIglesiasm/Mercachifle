@@ -7,38 +7,25 @@
   <title>Document</title>
 </head>
 <body>
-  <nav>
-    <div class="cuadrado"></div>
+  <header>
+    <nav>
+      <a href="" class="enlace">
+        <img src="https://cdn.discordapp.com/attachments/1009079449683251302/1041840865691316335/Diseno_sin_titulo.png" alt="Logo Mercachifle" class="logo"/>
+      </a>
+      <ul>
+        <li type="button" (click)="pasarARegister();"><a>SIGN IN</a></li>
+        <li type="button" (click)="pasarALogin();"><a>LOGIN</a></li>
+        <li><a href="#">
+          About us</a></li>
+      </ul>
+    </nav>
+  </header>
     
-    <button class="btn" (click)="pasarARegister();" type="button">Register</button>
-    <button class="btn" (click)="pasarALogin();"  type="button">Login</button>
-  </nav>
-  <nav>
-    <input type="checkbox" id="check">
-    <label for="check" class="checkbtn">
-        <i class="fas fa-bars"></i>
-    </label>
-    <a href="" class="enlace">
-      <img src="https://cdn.discordapp.com/attachments/1009079449683251302/1041840865691316335/Diseno_sin_titulo.png" alt="Logo Mercachifle" class="logo"/>
-    </a>
-    <ul>
-        <li type="button" (click)="pasarARegister();"><a>Register</a></li>
-        <li type="button" (click)="pasarALogin();"><a>Login</a></li>
-        <li><a href="#">Contacto</a></li>
-    </ul>
-</nav>
-
-
-<h2>Fade in Overlay</h2>
-<p>Hover over the image to see the effect.</p>
-
-<div class="container">
-  <img src="data:image/png;base64,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" alt="Avatar" class="image">
-  <div class="overlay">
-    <div class="text">Hello World</div>
+<section id="imagen_principal">
+  <div class="img_prin">
+    <h2>Hace tu cambio <br><span class="ahora">¡¡Ahora!!</span></h2>
   </div>
-</div>
-
+  </section>
 
 <section class="proyectos" id="proyectos">
   
@@ -69,7 +56,7 @@
             loading="lazy"
             class="project-pic"
           />
-          <h3 class="titulo-de-proyecto">El inicio del proyecto</h3>
+          <h3 class="titulo-de-proyecto">Los problemas que tuvimos</h3>
           <p class="detalles-de-proyecto">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
             ratione vel inventore labore commodi modi quos culpa aut saepe!
@@ -86,7 +73,7 @@
             loading="lazy"
             class="project-pic"
           />
-          <h3 class="titulo-de-proyecto">El inicio del proyecto</h3>
+          <h3 class="titulo-de-proyecto">Que decidimos luego</h3>
           <p class="detalles-de-proyecto">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
             ratione vel inventore labore commodi modi quos culpa aut saepe!
@@ -103,7 +90,7 @@
             loading="lazy"
             class="project-pic"
           />
-          <h3 class="titulo-de-proyecto">El inicio del proyecto</h3>
+          <h3 class="titulo-de-proyecto">Como quedo el proyecto</h3>
           <p class="detalles-de-proyecto">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
             ratione vel inventore labore commodi modi quos culpa aut saepe!
@@ -113,6 +100,16 @@
       </div>
     </div>
       
+</section>
+<section id="caracteristicas">
+  <div class="container">
+    <h2>Nuestras caracteristicas</h2>
+    <ul>
+      <li>✅Intercambio</li>
+      <li>✅Encuentro entre cambiadores</li>
+      <li>✅store con variedad</li>
+    </ul>
+  </div>
 </section>
 
 
@@ -153,6 +150,7 @@
           </div>
       </div>
   </div>
+  <p>&copy; Mercachifle2022</p>
 </footer>
 </body>
 </html>
