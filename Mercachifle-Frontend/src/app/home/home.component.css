@@ -16,11 +16,17 @@
     --transition: 0.3s;
   }
 
+html{
+  scroll-behavior: smooth;
+}
+
   body{
-    margin: 0;
+
   }
+  
 
 nav{
+
     max-width: 100%;
     display: inline;
     position: fixed;
@@ -38,11 +44,17 @@ nav{
 }
 
 *{
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
+
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+
+
+header{
+  position: fixed;
+  width: 100%;
 }
 
 nav{
@@ -56,7 +68,7 @@ nav{
 }
 .logo{
 
-    height: 40px;
+    height: 45px;
 }
 nav ul{
     float: right;
@@ -95,7 +107,7 @@ section{
    /* background: url(fondo.jpg) no-repeat;*/
     background-size: cover;
     background-position: center center;
-    height: calc(100vh - 80px);
+
 }
 
 
@@ -148,7 +160,7 @@ section{
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: 3%;
+  margin-top: 1%;
   height: 90vh;
   background-image: linear-gradient(
     0deg,
@@ -160,96 +172,185 @@ section{
   background-size: cover;
 }
 
-.img_prin h2 .ahora{
-  color: #6441a5;
+#imagen_principal .img_prin{
+  font-size: 8vw;
+}
 
+#imagen_principal .ahora{
+  color: #6441a5;
+  font-size: 8vw;
  
 }
 
 /* footer */
 
 .footer-style {
+  
     padding-top: 20px;
     background-color:  #1d1c2b;
 }
-footer {
-  color: white;
+
+footer .copy{
+  color: #969696;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
-footer h4 {
-  margin-bottom: 5px;
-    font-weight: 4000;
+footer .container {
+  color: rgb(134, 134, 134);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
-footer .footer-above {
-  padding-top: 10px;
-  background-color: #6441a5;
+
+.footer-style h3{
+  font-size: 1.2em;
 }
-footer .footer-col {
-  margin-bottom: 15px;
-}
-footer .footer-below {
-  padding: 25px 0;
-  background-color: #6441a5;
-}
+
 
 /*Tarjetas de info*/
+button{
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 5px 20px;
+  border-radius: 6px;
+  border: 0px solid ;
+  color: white;
+  background-color: #6441a5;
+  margin: 15px;
+}
+button:hover{
+  background-color: #bd83ff;
+  transition: .5s;
+}
 
- .proyectos {
-    background-color: black;
-    padding: 50px;
-    margin-top: 0px;
-    
-  }
-  
-  .foto-de-proyecto {
-    width: 55%;
-    height: 50%;
-  }
-  
+#historia{
+  background-color: rgb(30, 30, 30);
+  color: white;
+  text-align: center;
+}
 
+#historia .container{
+ padding: 20px 12px 150px; 
+ text-align: center;
+}
 
-  .titulo-informacion {
-    text-align: center;
-    margin-bottom: 5px;
-    color: white;
-  }
-  
-  .contenedor-de-proyectos {
-    text-align: center;
-    width: 21.875rem;
-    padding: 10px;
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin:0px auto;
-  }
+#historia p{
+  display: none;
+}
 
-  .contenedor-de-proyecto p {
-    padding: 25px;
-  }
-  
-  .titulo-de-proyecto {
-    margin-bottom: var(--bottom-margin);
-  }
-  
-  .detalles-de-proyecto {
-    margin-bottom: var(--bottom-margin);
-  }
-  
-  .tarjeta-de-proyecto {
-    background-color: rgb(255, 255, 255);
-    border-radius: 5px;
-    box-shadow: 0 3px 10px var(--primary-shadow);
-    padding: 10px;
-    margin-left: 10px;
-  }
+#historia h2{
+  width: auto;
+  margin-top: 0;
+  font-size: 3.2em;
+   padding: 75px 12px; 
+ text-align: center;
+}
+
+#historia .carta1 .carta2 .carta3{
+
+}
+
+.carta1{
+  width: 100%;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.8),
+    rgba(0,0,0,0.8)
+  )
+  ,url(img/inicio_proyecto.jpg);
+  background-position: center center;
+  background-size: cover;
+  padding: 50px;
+  margin: 12px;
+  border-radius: 10px;
+}
+
+.carta2{
+  width: 100%;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0.6)
+  )
+  ,url(img/problemas_proyecto.jpg);
+  background-position: center center;
+  background-size: cover;
+  padding: 50px;
+  margin: 12px;
+  border-radius: 10px;
+}
+
+.carta3{
+  width: 100%;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.7)
+  )
+  ,url(img/final_proyecto.jpg);
+  background-position: center center;
+  background-size: cover;
+  padding: 50px;
+  margin: 12px;
+  border-radius: 10px;
+}
+/*caracteristicas*/
+#caracteristicas{
+  background-image: url(img/img_lista.jpg);
+  background-repeat: no-repeat;
+  background-size: 400px 300px;
+  background-position: calc(100vw - 700px) 200px;
+}
 
 #caracteristicas .container{
   text-align: center;
-  padding: 200px 12px;
+  padding: 100px 12px 150px;
 }
 #caracteristicas li{
+  font-size: 1.25em;
   margin: 15px 0px;
   font-weight: bold;
 }
 
+#caracteristicas h2{
+  width: auto;
+  margin-top: 0;
+  font-size: 3.2em;
+   padding: 75px 12px; 
+ text-align: center;
+}
+
+
+
+@media (min-width:720px){
+
+  #caracteristicas{
+    background-image: url(img/img_lista.jpg);
+    background-repeat: no-repeat;
+    background-size: 400px 300px;
+    background-position: calc(100vw - 700px) 200px;
+  }
+
+  #historia .container{
+    display: flex;
+    justify-content: center;
+  }
+
+  #historia p{
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  #historia .carta1, .carta2, .carta3{
+    padding: 40px;
+  }
+
+  #caracteristicas .container{
+    text-align: initial;
+  }
+
+  #caracteristicas ul{
+    margin-left: 100px;
+  }
+}
