@@ -35,13 +35,7 @@ nav{
     background-color: rgb(0, 0, 0);
 }
 
-.btn{
-    text-decoration: none;
-    color: initial;
-    background-color: rgb(255, 255, 255);
-    display: inline;
-    margin-right: 0%;
-}
+
 
 *{
 
@@ -185,9 +179,8 @@ section{
 /* footer */
 
 .footer-style {
-  
-    padding-top: 20px;
-    background-color:  #1d1c2b;
+  padding-top: 20px;
+  background-color:  #1d1c2b;
 }
 
 footer .copy{
@@ -207,8 +200,13 @@ footer .container {
   font-size: 1.2em;
 }
 
+footer .contact{
+  padding: 0 20px;
+}
+
 
 /*Tarjetas de info*/
+/*Boton con hover*/
 button{
   font-size: 1.2em;
   font-weight: bold;
@@ -223,7 +221,7 @@ button:hover{
   background-color: #bd83ff;
   transition: .5s;
 }
-
+/*Boton con hover*/
 #historia{
   background-color: rgb(30, 30, 30);
   color: white;
@@ -296,12 +294,7 @@ button:hover{
   border-radius: 10px;
 }
 /*caracteristicas*/
-#caracteristicas{
-  background-image: url(img/img_lista.jpg);
-  background-repeat: no-repeat;
-  background-size: 400px 300px;
-  background-position: calc(100vw - 700px) 200px;
-}
+
 
 #caracteristicas .container{
   text-align: center;
@@ -317,19 +310,22 @@ button:hover{
   width: auto;
   margin-top: 0;
   font-size: 3.2em;
-   padding: 75px 12px; 
- text-align: center;
+  padding: 75px 12px; 
+  text-align: center;
 }
 
 
 
 @media (min-width:720px){
 
-  #caracteristicas{
-    background-image: url(img/img_lista.jpg);
-    background-repeat: no-repeat;
-    background-size: 400px 300px;
-    background-position: calc(100vw - 700px) 200px;
+
+
+  #caracteristicas h2{
+    width: auto;
+    margin-top: 0;
+    font-size: 4vw;
+    padding: 75px 12px; 
+   text-align: center;
   }
 
   #historia .container{
@@ -351,6 +347,6 @@ button:hover{
   }
 
   #caracteristicas ul{
-    margin-left: 100px;
+    text-align: center;
   }
 }
