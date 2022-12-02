@@ -57,7 +57,15 @@ class productoController extends Controller
         $dataresponse = Productos::get();
         return response()-> json($dataresponse);
     }
+    public function productMyGetAll($mail){
+        if(Productos::where("Vendedor",$mail)->exists()){
 
+        $dataresponse = Productos::where("Vendedor",$mail)->get();
+        return response()-> json($dataresponse);
+    }
+
+    }
+    
     public function productGet($id){
         $dataresponse = Productos::find($id);
         return response()-> json($dataresponse);

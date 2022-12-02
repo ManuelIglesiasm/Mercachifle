@@ -13,7 +13,7 @@ export class ProductListComponent implements OnInit {
   }
   // Obtiene la lista de productos
   loadProducts() {
-    return this.restApi.getProducts().subscribe((data: {}) => {
+    return this.restApi.getMyProducts(sessionStorage.getItem('user')).subscribe((data: {}) => {
       this.Product = data;
     });
   }
