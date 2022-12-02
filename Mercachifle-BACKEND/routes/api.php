@@ -32,7 +32,7 @@ Route::get("my_product_get_all/{mail}", [productoController::class, "productMyGe
 Route::get("product_get/{id}", [productoController::class, "productGet"]);
 //Route::delete("product_delete", [productoController::class, "productDelete"]); 
 Route::delete('product_delete/{id}', [productoController::class, "productDelete"]);
-Route::put('products/{id}', [productoController::class, "productUpdate"]);
+Route::post('products/{id}', [productoController::class, "productUpdate"]);
 
 
 Route::post("usuario_create", [usuarioController::class, "usuarioCreate"]);
