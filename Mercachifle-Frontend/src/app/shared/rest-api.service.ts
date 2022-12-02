@@ -51,7 +51,7 @@ export class RestApiService {
   // HttpClient API put() method => Update employee
   updateProduct(id: any, product: any): Observable<Product> {
     return this.http
-      .put<Product>(
+      .post<Product>(
         this.apiURL + '/products/' + id,
         JSON.stringify(product),
         this.httpOptions

@@ -3,7 +3,7 @@
       
       <h3 class="mb-3 text-center">Actualizar Producto</h3>
       <div class="form-group">
-        <input type="text" [(ngModel)]="productData.nombre" class="form-control" placeholder="Nombre">
+        <input type="text" [(ngModel)]="productData.Nombre" class="form-control" placeholder="Nombre">
       </div>
       <div class="form-group">
         <input type="text" [(ngModel)]="productData.Descripcion" class="form-control" placeholder="descripcion">
@@ -12,7 +12,7 @@
         <input type="text" [(ngModel)]="productData.Stock" class="form-control" placeholder="stock">
       </div>
       <div class="form-group">
-        <button class="btn btn-success btn-lg btn-block" (click)="updateProduct()">Actualizar Producto</button>
+        <button class="btn btn-success btn-lg btn-block" (click)="productUpdate()">Actualizar Producto</button>
       </div>
       
     </div>
