@@ -25,6 +25,12 @@ export class RestApiService {
       .get<Product>(this.apiURL + '/product_get_all')
       .pipe(retry(1), catchError(this.handleError));
   }
+
+  getMyProducts(mail : any): Observable<Product> {
+    return this.http
+      .get<Product>(this.apiURL + '/my_product_get_all/'+mail)
+      .pipe(retry(1), catchError(this.handleError));
+  }
   // HttpClient API get() method => obtener producto
   getProduct(id: any): Observable<Product> {
     return this.http

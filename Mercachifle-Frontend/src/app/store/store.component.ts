@@ -7,6 +7,7 @@ import { RestApiService } from '../shared/rest-api.service';
 })
 export class StoreComponent implements OnInit {
   Product: any = [];
+  router: any;
   constructor(public restApi: RestApiService) {}
   ngOnInit() {
     this.loadProducts();
