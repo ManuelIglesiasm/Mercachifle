@@ -28,7 +28,7 @@
               <td>{{ product.Descripcion }}</td>
               <td>{{ product.Stock }}</td>
               <td>{{ product.Vendedor }}</td>
-              <td><button>Messirve</button></td>
+              <td><button (click)="loadUser(product.Vendedor)">Contactar</button></td>
               
 
             </tr>

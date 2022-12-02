@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Product } from '../shared/product';
+import {User} from '../shared/user'
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 @Injectable({
@@ -72,6 +73,13 @@ export class RestApiService {
       return errorMessage;
     });
   }
+
+  getUser(id: any): Observable<User> {
+    return this.http
+      .get<User>(this.apiURL + '/usuario_get/' + id)
+      .pipe(retry(1), catchError(this.handleError));
+  }
+
   register(name: string, email: string, password: string, confirmPassword: string){
     console.log("pepe2");
     const formData = new FormData();
