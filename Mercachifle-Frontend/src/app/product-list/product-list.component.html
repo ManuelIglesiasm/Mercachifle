@@ -1,7 +1,23 @@
-<button class="btn btn-outline-primary" routerLink="/store">
-  Store
-</button>
 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<header>
+  <nav>
+    <a href="" class="enlace">
+      <img src="https://cdn.discordapp.com/attachments/1009079449683251302/1041840865691316335/Diseno_sin_titulo.png" alt="Logo Mercachifle" class="logo"/>
+    </a>
+    <ul>
+      <li><a href="#historia_mercachifle" class="link">About us</a></li>
+      <li><a href="/store" class="link">Store</a></li>
+    </ul>
+  </nav>
+</header>
+  
 <div class="container custom-container-2">
     <!-- Se muestra cuando no hay producto -->
     <div class="no-data text-center" *ngIf="Product.length == 0">
