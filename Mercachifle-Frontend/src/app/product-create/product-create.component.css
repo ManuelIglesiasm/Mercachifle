@@ -49,9 +49,14 @@
     width: 100%;
     display: block;
     padding: 0.875rem 1rem;
-    border-radius: 1.5rem;
+    border-radius: 10px;
     box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
     cursor: pointer;
+  }
+
+  button:hover{
+    background-color: #bd83ff;
+    transition: .5s;
   }
 
 

@@ -1,11 +1,3 @@
-footer {
-    background-color: #6431a7;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 40px;
-    color: black;
-  }
 
   header{
     position: fixed;
@@ -107,4 +99,53 @@ footer {
   }
   .link{
     text-decoration: none;
+  }
+
+  button{
+    font-size: 1em;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 0px solid ;
+    color: white;
+    background-color: #6441a5;
+    margin: 3px;
+  }
+  button:hover{
+    background-color: #bd83ff;
+    transition: .5s;
+  }
+
+  .no-data{
+    padding: 10px;
+  }
+
+
+  .footer-style {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: 20px;
+    background-color:  #1d1c2b;
+  }
+  
+  footer .copy{
+    color: #969696;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  footer .container {
+    color: rgb(134, 134, 134);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  
+  .footer-style h3{
+    font-size: 1.2em;
+  }
+  
+  footer .contact{
+    padding: 0 20px;
   }

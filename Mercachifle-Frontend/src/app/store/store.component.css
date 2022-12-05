@@ -115,11 +115,14 @@ nav{
   }
 
   footer{
-    padding-top: 900px;
+
   }
 
 
   .footer-style {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     padding-top: 20px;
     background-color:  #1d1c2b;
   }
@@ -143,4 +146,23 @@ nav{
   
   footer .contact{
     padding: 0 20px;
+  }
+
+  button{
+    font-size: 1em;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 0px solid ;
+    color: white;
+    background-color: #6441a5;
+    margin: 3px;
+  }
+  button:hover{
+    background-color: #bd83ff;
+    transition: .5s;
+  }
+
+  .container{
+
   }
